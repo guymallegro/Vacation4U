@@ -1,31 +1,22 @@
 package sample;
 
 import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 public class Main extends Application {
     static Stage theStage;
-    static Parent registration;
+    static final String MAIN_MENU_SCREEN = "MainMenu.fxml";
+    static final String REGISTRATION_SCREEN = "Registration.fxml";
 
     @Override
-    public void start(Stage primaryStage) throws Exception {
+    public void start(Stage primaryStage){
         theStage = primaryStage;
-        Parent root = FXMLLoader.load(getClass().getResource("MainMenu.fxml"));
-        registration = FXMLLoader.load(getClass().getResource("Registration.fxml"));
-        primaryStage.setTitle("Vacation4U");
-        primaryStage.setScene(new Scene(root));
-        primaryStage.show();
-    }
-
-    public static void switchScene(String scene) {
-        switch (scene) {
-            case "registration":
-                theStage.setScene(new Scene(registration));
-            case "mainMenu":
-        }
+        Controller controller = new Controller();
+        controller.loadScreen(MAIN_MENU_SCREEN);
+        controller.loadScreen(REGISTRATION_SCREEN);
+        controller.initScreen();
+        theStage.setTitle("Vacation4U");
     }
 
     public static void main(String[] args) {

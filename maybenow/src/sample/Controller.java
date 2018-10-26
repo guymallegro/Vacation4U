@@ -1,43 +1,32 @@
 package sample;
 
-import javafx.event.ActionEvent;
-import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
-import javafx.scene.text.Text;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 
-import java.net.URL;
-import java.sql.SQLException;
-import java.util.ResourceBundle;
+import java.util.HashMap;
 
-public class Controller implements Initializable {
-    public Model model = new Model();
+class Controller {
+    private static HashMap<String, Parent> screens = new HashMap<>();
 
-
-    public TextField userName;
-    public PasswordField password;
-    public Text incorrect;
-    public Button signup;
-
-    public void login() throws SQLException {
-        incorrect.setVisible(false);
-        if (model.login(userName.getText(), password.getText()))
-            System.out.println("Login successful!!");
-        else
-            incorrect.setVisible(true);
+    void loadScreen(String source) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource(source));
+            Parent loadScreen = loader.load();
+            screens.put(source, loadScreen);
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
     }
 
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
-
+    void initScreen() {
+        Scene scene = new Scene(screens.get(Main.MAIN_MENU_SCREEN));
+        Main.theStage.setScene(scene);
+        Main.theStage.show();
+        Main.theStage.getScene().setRoot(screens.get(Main.MAIN_MENU_SCREEN));
     }
 
-    public void signUp(ActionEvent actionEvent) {
-        Main.switchScene("registration");
-    }
-
-    public void back(ActionEvent actionEvent) {
-        Main.switchScene("mainMenu");
+    void setScreen(String name) {
+        Main.theStage.getScene().setRoot(screens.get(name));
     }
 }
