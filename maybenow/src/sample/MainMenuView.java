@@ -10,7 +10,6 @@ import java.io.IOException;
 import java.sql.SQLException;
 
 public class MainMenuView extends Controller {
-    private Model model = new Model();
     public TextField userName;
     public PasswordField password;
     public Text incorrect;
@@ -27,4 +26,5 @@ public class MainMenuView extends Controller {
     public void signUp(ActionEvent actionEvent){
         setScreen(Main.REGISTRATION_SCREEN);
     }
+
 }

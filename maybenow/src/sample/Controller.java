@@ -8,6 +8,7 @@ import java.util.HashMap;
 
 class Controller {
     private static HashMap<String, Parent> screens = new HashMap<>();
+    public Model model = new Model();
 
     void loadScreen(String source) {
         try {
