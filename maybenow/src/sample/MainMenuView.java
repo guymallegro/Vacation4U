@@ -17,13 +17,15 @@ public class MainMenuView extends Controller {
 
     public void login() throws SQLException {
         incorrect.setVisible(false);
-        if (model.login(userName.getText(), password.getText()))
-            System.out.println("Login successful!!");
-        else
+        if (model.login(userName.getText(), password.getText())) {
+            setScreen(Main.UPDATE_SCREEN);
+            model.currentUser = userName.getText();
+            model.getInfo(model.currentUser);
+        } else
             incorrect.setVisible(true);
     }
 
-    public void signUp(ActionEvent actionEvent){
+    public void signUp(ActionEvent actionEvent) {
         setScreen(Main.REGISTRATION_SCREEN);
     }
 

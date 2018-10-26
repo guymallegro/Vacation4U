@@ -24,5 +24,3 @@ public class RegistrationView extends Controller{
         setScreen(Main.MAIN_MENU_SCREEN);
     }
 }
-
-
