@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
@@ -44,7 +45,6 @@
       </Text>
       <TextField fx:id="userName" layoutX="67.0" layoutY="120.0" prefHeight="26.0" prefWidth="240.0" style="-fx-background-color: #d6a900;" />
       <TextField fx:id="password" layoutX="67.0" layoutY="190.0" prefHeight="26.0" prefWidth="240.0" style="-fx-background-color: #d6a900;" />
-      <TextField fx:id="birth" layoutX="67.0" layoutY="260.0" prefHeight="26.0" prefWidth="240.0" style="-fx-background-color: #d6a900;" />
       <TextField fx:id="firstName" layoutX="400.0" layoutY="120.0" prefHeight="26.0" prefWidth="240.0" style="-fx-background-color: #d6a900;" />
       <TextField fx:id="lastName" layoutX="400.0" layoutY="190.0" prefHeight="26.0" prefWidth="240.0" style="-fx-background-color: #d6a900;" />
       <TextField fx:id="city" layoutX="400.0" layoutY="260.0" prefHeight="26.0" prefWidth="240.0" style="-fx-background-color: #d6a900;" />
@@ -58,4 +58,15 @@
             <Font size="18.0" />
          </font>
       </Button>
+   <Text fx:id="incorrect" fill="#ff0e0e" layoutX="157.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User name already exists" visible="false" wrappingWidth="180.7294921875">
+      <font>
+         <Font name="System Bold" size="15.0" />
+      </font>
+   </Text>
+   <DatePicker fx:id="birth" layoutX="67.0" layoutY="260.0" prefHeight="31.0" prefWidth="240.0" stylesheets="@ViewStyle.css" />
+   <Text fx:id="badage" fill="#ff0e0e" layoutX="167.0" layoutY="240.0" strokeType="OUTSIDE" strokeWidth="0.0" text="you must be 18 years old" visible="false" wrappingWidth="195.7294921875">
+      <font>
+         <Font name="System Bold" size="15.0" />
+      </font>
+   </Text>
 </AnchorPane>
