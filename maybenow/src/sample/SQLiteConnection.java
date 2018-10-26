@@ -27,7 +27,10 @@ public class SQLiteConnection {
         String sql = "CREATE TABLE IF NOT EXISTS users (\n"
                 + "	username text PRIMARY KEY,\n"
                 + "	password text NOT NULL,\n"
-                + "	email text real\n"
+                + "	birth text real,\n"
+                + "	firstName text NOT NULL,\n"
+                + "	lastName text NOT NULL,\n"
+                + "	city text NOT NULL\n"
                 + ");";
 
         try (Connection conn = DriverManager.getConnection(url);
