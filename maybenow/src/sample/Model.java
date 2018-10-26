@@ -1,6 +1,7 @@
 package sample;
 
 import java.sql.*;
+import java.time.LocalDate;
 import java.util.HashMap;
 
 public class Model {
@@ -28,15 +29,15 @@ public class Model {
         return false;
     }
 
-    public boolean RegisterUser(String userName, String password, String birth, String firstName, String lastName, String city) {
+    public boolean RegisterUser(String userName, String password, LocalDate date, String firstName, String lastName, String city) {
 
         String sql = "INSERT INTO users(userName,password,birth,firstName,lastName,city) VALUES(?,?,?,?,?,?)";
-
         try (Connection conn = SQLiteConnection.Connector();
              PreparedStatement pstmt = conn.prepareStatement(sql)) {
             pstmt.setString(1, userName);
             pstmt.setString(2, password);
-            pstmt.setString(3, birth);
+            String strdate =date.getDayOfMonth()+"/" +date.getMonthValue()+"/" + date.getYear();
+            pstmt.setString(3, strdate);
             pstmt.setString(4, firstName);
             pstmt.setString(5, lastName);
             pstmt.setString(6, city);
