@@ -37,10 +37,7 @@ public class RegistrationView extends Controller{
         else
             incorrect.setVisible(true);
         badage.setVisible(false);
-
-
     }
-
     public void back(ActionEvent actionEvent){
         setScreen(Main.MAIN_MENU_SCREEN);
     }
