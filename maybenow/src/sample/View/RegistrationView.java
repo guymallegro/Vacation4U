@@ -1,16 +1,13 @@
-package sample;
+package sample.View;
 
 import javafx.event.ActionEvent;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
 
-import javax.xml.soap.Text;
-import java.io.IOException;
-import java.sql.Date;
 import java.sql.SQLException;
 import java.time.LocalDate;
 
-public class RegistrationView extends Controller{
+public class RegistrationView extends View {
     public TextField userName;
     public TextField password;
     public DatePicker birth;
@@ -28,17 +25,17 @@ public class RegistrationView extends Controller{
             badage.setVisible(true);
             return;
         }
-        if (model.RegisterUser(userName.getText(),password.getText(),date,firstName.getText(),lastName.getText(),city.getText())) {
+        if (controller.registerUser(userName.getText(),password.getText(),date,firstName.getText(),lastName.getText(),city.getText())) {
             System.out.println("Register User successful!!");
             badage.setVisible(false);
             incorrect.setVisible(false);
-            setScreen(Main.MAIN_MENU_SCREEN);
+            controller.setScreen(Main.MAIN_MENU_SCREEN);
         }
         else
             incorrect.setVisible(true);
         badage.setVisible(false);
     }
     public void back(ActionEvent actionEvent){
-        setScreen(Main.MAIN_MENU_SCREEN);
+        controller.setScreen(Main.MAIN_MENU_SCREEN);
     }
 }

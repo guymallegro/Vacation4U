@@ -1,14 +1,16 @@
-package sample;
+package sample.View;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
 import javafx.scene.control.TextField;
+import sample.Controller;
+import sample.Model.Model;
 
 import java.net.URL;
 import java.util.ResourceBundle;
 
 
-public class UpdateView extends Controller implements Initializable {
+public class UpdateView extends View implements Initializable {
 
     public TextField userName;
     public TextField password;
@@ -18,7 +20,7 @@ public class UpdateView extends Controller implements Initializable {
     public TextField city;
 
     public void back(ActionEvent actionEvent) {
-        setScreen(Main.MAIN_MENU_SCREEN);
+        controller.setScreen(Main.MAIN_MENU_SCREEN);
     }
 
     @Override
@@ -37,6 +39,6 @@ public class UpdateView extends Controller implements Initializable {
     }
 
     public void updateInfo(ActionEvent actionEvent) {
-        model.updateUser(userName.getText(),password.getText(),birth.getText(),firstName.getText(),lastName.getText(),city.getText());
+        controller.updateUser(userName.getText(),password.getText(),birth.getText(),firstName.getText(),lastName.getText(),city.getText());
     }
 }

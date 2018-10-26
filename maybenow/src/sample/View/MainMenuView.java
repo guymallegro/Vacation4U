@@ -1,15 +1,15 @@
-package sample;
+package sample.View;
 
 import javafx.event.ActionEvent;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
+import sample.Controller;
 
-import java.io.IOException;
 import java.sql.SQLException;
 
-public class MainMenuView extends Controller {
+public class MainMenuView extends View {
     public TextField userName;
     public PasswordField password;
     public Text incorrect;
@@ -17,16 +17,16 @@ public class MainMenuView extends Controller {
 
     public void login() throws SQLException {
         incorrect.setVisible(false);
-        if (model.login(userName.getText(), password.getText())) {
-            setScreen(Main.UPDATE_SCREEN);
-            model.currentUser = userName.getText();
-            model.getInfo(model.currentUser);
+        if (controller.login(userName.getText(), password.getText())) {
+            controller.setScreen(Main.UPDATE_SCREEN);
+            controller.setCurrentUser(userName.getText());
+            controller.getInfo(userName.getText());
         } else
             incorrect.setVisible(true);
     }
 
     public void signUp(ActionEvent actionEvent) {
-        setScreen(Main.REGISTRATION_SCREEN);
+        controller.setScreen(Main.REGISTRATION_SCREEN);
     }
 
 }

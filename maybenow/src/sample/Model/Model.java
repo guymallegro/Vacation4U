@@ -1,4 +1,4 @@
-package sample;
+package sample.Model;
 
 import java.sql.*;
 import java.time.LocalDate;
@@ -6,8 +6,8 @@ import java.util.HashMap;
 
 public class Model {
     private Connection connection;
-    static String currentUser;
-    static HashMap<String, String> userInfo;
+    public String currentUser;
+    public static HashMap<String, String> userInfo;
 
     public Model() {
         connection = SQLiteConnection.Connector();
