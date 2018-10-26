@@ -25,8 +25,8 @@ public class RegistrationView extends Controller{
         LocalDate date = birth.getValue();
         int year=date.getYear();
         if(2018-year<18){
-        badage.setVisible(true);
-        return;
+            badage.setVisible(true);
+            return;
         }
         if (model.RegisterUser(userName.getText(),password.getText(),date,firstName.getText(),lastName.getText(),city.getText())) {
             System.out.println("Register User successful!!");
@@ -36,11 +36,8 @@ public class RegistrationView extends Controller{
         }
         else
             incorrect.setVisible(true);
-            badage.setVisible(false);
-
-
+        badage.setVisible(false);
     }
-
     public void back(ActionEvent actionEvent){
         setScreen(Main.MAIN_MENU_SCREEN);
     }
