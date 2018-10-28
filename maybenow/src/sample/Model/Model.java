@@ -43,7 +43,7 @@ public class Model {
             pstmt.setString(6, city);
             pstmt.executeUpdate();
         } catch (SQLException e) {
-            System.out.println(e.getMessage());
+            // System.out.println(e.getMessage());
             return false;
         }
         return true;
@@ -133,6 +133,18 @@ public class Model {
             System.out.println(e.getMessage());
         }
         return false;
+    }
+
+    public void DeleteUser() {
+
+        String sql = "DELETE FROM users WHERE username = ?";
+
+        try (PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
+            preparedStatement.setString(1, currentUser);
+            preparedStatement.executeUpdate();
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
     }
 
 }

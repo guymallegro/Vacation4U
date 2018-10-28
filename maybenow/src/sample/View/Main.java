@@ -10,6 +10,8 @@ public class Main extends Application {
     public static final String MAIN_MENU_SCREEN = "View/MainMenu.fxml";
     public static final String REGISTRATION_SCREEN = "View/Registration.fxml";
     public static final String UPDATE_SCREEN = "View/Update.fxml";
+    public static final String OPERATION_SCREEN = "View/Operation.fxml";
+    public static final String SEARCH_SCREEN = "View/Search.fxml";
 
     @Override
     public void start(Stage primaryStage) {
@@ -21,6 +23,8 @@ public class Main extends Application {
         controller.loadScreen(MAIN_MENU_SCREEN);
         controller.loadScreen(REGISTRATION_SCREEN);
         controller.loadScreen(UPDATE_SCREEN);
+        controller.loadScreen(OPERATION_SCREEN);
+        controller.loadScreen(SEARCH_SCREEN);
         controller.initScreen();
         theStage.setTitle("Vacation4U");
     }

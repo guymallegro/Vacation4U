@@ -18,7 +18,7 @@ public class MainMenuView extends View {
     public void login() throws SQLException {
         incorrect.setVisible(false);
         if (controller.login(userName.getText(), password.getText())) {
-            controller.setScreen(Main.UPDATE_SCREEN);
+            controller.setScreen(Main.OPERATION_SCREEN);
             controller.setCurrentUser(userName.getText());
             controller.getInfo(userName.getText());
         } else

@@ -13,7 +13,7 @@ public class SearchView extends View {
     public TextField city;
 
     public void back(ActionEvent actionEvent) {
-        controller.setScreen(Main.MAIN_MENU_SCREEN);
+        controller.setScreen(Main.OPERATION_SCREEN);
     }
 
     public void search(ActionEvent event) {

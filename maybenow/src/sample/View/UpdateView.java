@@ -31,13 +31,14 @@ public class UpdateView extends View implements Initializable {
     public TextField birth;
 
     public void back(ActionEvent actionEvent) {
-        controller.setScreen(Main.MAIN_MENU_SCREEN);
+        controller.setScreen(Main.OPERATION_SCREEN);
     }
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         userName.focusedProperty().addListener((ov, oldV, newV) -> {
             if (newV) {
+                controller.getInfo(controller.getCurrentUser());
                 userName.setText(controller.getUserInfo().get("username"));
                 password.setText(controller.getUserInfo().get("password"));
                 firstName.setText(controller.getUserInfo().get("firstName"));

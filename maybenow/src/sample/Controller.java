@@ -74,4 +74,8 @@ public class Controller {
     public String getCurrentUser() {
         return model.getCurrentUser();
     }
+
+    public void DeleteUser() {
+        model.DeleteUser();
+    }
 }
