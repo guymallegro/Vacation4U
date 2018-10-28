@@ -12,7 +12,7 @@ import java.util.HashMap;
 
 public class Controller {
     private HashMap<String, Parent> screens = new HashMap<>();
-    Model model;
+    private Model model;
 
     public Controller(Model model) {
         this.model = model;
@@ -39,7 +39,7 @@ public class Controller {
         Main.theStage.getScene().setRoot(screens.get(name));
     }
 
-    public boolean login(String userName, String password) throws SQLException {
+    public boolean login(String userName, String password) {
         return model.login(userName, password);
     }
 
@@ -52,10 +52,14 @@ public class Controller {
     }
 
     public void setCurrentUser(String userName) {
-        model.currentUser = userName;
+        model.setCurrentUser(userName);
     }
 
     public void getInfo(String userName) {
         model.getInfo(userName);
+    }
+
+    public Model getModel() {
+        return model;
     }
 }

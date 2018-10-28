@@ -6,14 +6,14 @@ import java.util.HashMap;
 
 public class Model {
     private Connection connection;
-    public String currentUser;
-    public static HashMap<String, String> userInfo;
+    private String currentUser;
+    private HashMap<String, String> userInfo;
 
     public Model() {
         connection = SQLiteConnection.Connector();
     }
 
-    public boolean login(String userName, String password) throws SQLException {
+    public boolean login(String userName, String password) {
         String sql = "SELECT username "
                 + "FROM users WHERE username = ? AND password = ?";
 
@@ -36,7 +36,7 @@ public class Model {
              PreparedStatement pstmt = conn.prepareStatement(sql)) {
             pstmt.setString(1, userName);
             pstmt.setString(2, password);
-            String strdate =date.getDayOfMonth()+"/" +date.getMonthValue()+"/" + date.getYear();
+            String strdate = date.getDayOfMonth() + "/" + date.getMonthValue() + "/" + date.getYear();
             pstmt.setString(3, strdate);
             pstmt.setString(4, firstName);
             pstmt.setString(5, lastName);
@@ -88,4 +88,17 @@ public class Model {
             System.out.println(e.getMessage());
         }
     }
+
+    public HashMap<String, String> getUserInfo() {
+        return userInfo;
+    }
+
+    public String getCurrentUser() {
+        return currentUser;
+    }
+
+    public void setCurrentUser(String userName) {
+        currentUser = userName;
+    }
+
 }
