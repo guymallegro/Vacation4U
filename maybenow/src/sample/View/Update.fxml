@@ -7,6 +7,7 @@
 <?import javafx.scene.text.Text?>
 
 <?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.PasswordField?>
 <AnchorPane prefHeight="400.0" prefWidth="700.0" style="-fx-background-color: #edc157;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.View.UpdateView">
     <Text fill="WHITE" layoutX="230.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Update" textAlignment="CENTER" wrappingWidth="239.7294921875">
         <font>
@@ -44,8 +45,8 @@
         </font>
     </Text>
     <TextField fx:id="userName" layoutX="67.0" layoutY="120.0" prefHeight="26.0" prefWidth="240.0" style="-fx-background-color: #d6a900;" text="******" />
-    <TextField fx:id="password" layoutX="67.0" layoutY="190.0" prefHeight="26.0" prefWidth="240.0" style="-fx-background-color: #d6a900;" text="******" />
-    <DatePicker fx:id="birth" layoutX="67.0" layoutY="260.0" prefHeight="31.0" prefWidth="240.0" stylesheets="@ViewStyle.css" />
+    <PasswordField fx:id="password" layoutX="67.0" layoutY="190.0" prefHeight="26.0" prefWidth="240.0" style="-fx-background-color: #d6a900;" text="******" />
+    <TextField fx:id="birth" layoutX="67.0" layoutY="260.0" prefHeight="31.0" prefWidth="240.0" stylesheets="@ViewStyle.css" />
     <TextField fx:id="firstName" layoutX="400.0" layoutY="120.0" prefHeight="26.0" prefWidth="240.0" style="-fx-background-color: #d6a900;" text="******" />
     <TextField fx:id="lastName" layoutX="400.0" layoutY="190.0" prefHeight="26.0" prefWidth="240.0" style="-fx-background-color: #d6a900;" text="******" />
     <TextField fx:id="city" layoutX="400.0" layoutY="260.0" prefHeight="26.0" prefWidth="240.0" style="-fx-background-color: #d6a900;" text="******" />

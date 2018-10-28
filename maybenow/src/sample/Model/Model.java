@@ -49,7 +49,7 @@ public class Model {
         return true;
     }
 
-    public boolean updateUser(String userName, String password, LocalDate date, String firstName, String lastName, String city) {
+    public boolean updateUser(String userName, String password, String date, String firstName, String lastName, String city) {
         String sql = "UPDATE users SET username = ?, password = ?, birth = ?, firstName = ?, lastName = ?, city = ?"
                 + "  WHERE username = ?";
 
@@ -57,8 +57,7 @@ public class Model {
              PreparedStatement pstmt = conn.prepareStatement(sql)) {
             pstmt.setString(1, userName);
             pstmt.setString(2, password);
-            String strdate = date.getDayOfMonth() + "/" + date.getMonthValue() + "/" + date.getYear();
-            pstmt.setString(3, strdate);
+            pstmt.setString(3, date);
             pstmt.setString(4, firstName);
             pstmt.setString(5, lastName);
             pstmt.setString(6, city);
@@ -71,7 +70,7 @@ public class Model {
         return true;
     }
 
-    public HashMap<String,String> searchUser(String userName) {
+    public HashMap<String, String> searchUser(String userName) {
         userInfo = new HashMap<>();
         String sql = "SELECT username,birth,firstName,lastName,city " +
                 "FROM users WHERE username = ?";
@@ -119,6 +118,21 @@ public class Model {
 
     public void setCurrentUser(String userName) {
         currentUser = userName;
+    }
+
+    public boolean findUser(String userName) {
+        String sql = "SELECT username "
+                + "FROM users WHERE username = ?";
+
+        try (PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
+            preparedStatement.setString(1, userName);
+            ResultSet rs = preparedStatement.executeQuery();
+            return rs.next();
+
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+        return false;
     }
 
 }

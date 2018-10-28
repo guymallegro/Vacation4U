@@ -4,6 +4,7 @@ import com.sun.org.apache.xpath.internal.operations.Bool;
 import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
 import javafx.scene.control.DatePicker;
+import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 
@@ -16,7 +17,7 @@ import java.util.ResourceBundle;
 public class UpdateView extends View implements Initializable {
 
     public TextField userName;
-    public TextField password;
+    public PasswordField password;
     public TextField firstName;
     public TextField lastName;
     public TextField city;
@@ -27,7 +28,7 @@ public class UpdateView extends View implements Initializable {
     public Text cityError;
     public Text userNameError;
     public Text updateSucc;
-    public DatePicker birth;
+    public TextField birth;
 
     public void back(ActionEvent actionEvent) {
         controller.setScreen(Main.MAIN_MENU_SCREEN);
@@ -42,6 +43,7 @@ public class UpdateView extends View implements Initializable {
                 firstName.setText(controller.getUserInfo().get("firstName"));
                 lastName.setText(controller.getUserInfo().get("lastName"));
                 city.setText(controller.getUserInfo().get("city"));
+                birth.setText(controller.getUserInfo().get("birth"));
                 resetErrors();
             }
         });
@@ -49,9 +51,8 @@ public class UpdateView extends View implements Initializable {
 
     public void updateInfo(ActionEvent actionEvent) {
         resetErrors();
-        LocalDate date = birth.getValue();
         if (validation()) {
-            controller.updateUser(userName.getText(), password.getText(), date, firstName.getText(), lastName.getText(), city.getText());
+            controller.updateUser(userName.getText(), password.getText(), birth.getText(), firstName.getText(), lastName.getText(), city.getText());
             updateSucc.setVisible(true);
         }
     }
@@ -77,6 +78,10 @@ public class UpdateView extends View implements Initializable {
         if (city.getText().equals("")) {
             result = false;
             cityError.setVisible(true);
+        }
+        if (controller.findUser(userName.getText()) && !controller.getCurrentUser().equals(userName.getText())) {
+            result = false;
+            userNameError.setVisible(true);
         }
         return result;
     }

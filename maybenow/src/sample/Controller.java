@@ -47,15 +47,15 @@ public class Controller {
         return model.RegisterUser(userName, password, date, firstName, lastName, city);
     }
 
-    public void updateUser(String userName, String password, LocalDate birth, String firstName, String lastName, String city) {
-        model.updateUser(userName, password, birth, firstName, lastName, city);
+    public boolean updateUser(String userName, String password, String birth, String firstName, String lastName, String city) {
+        return model.updateUser(userName, password, birth, firstName, lastName, city);
     }
 
     public void setCurrentUser(String userName) {
         model.setCurrentUser(userName);
     }
 
-    public HashMap<String,String> searchUser(String userName) {
+    public HashMap<String, String> searchUser(String userName) {
         return model.searchUser(userName);
     }
 
@@ -63,7 +63,15 @@ public class Controller {
         model.getInfo(userName);
     }
 
-    public HashMap<String, String> getUserInfo(){
+    public HashMap<String, String> getUserInfo() {
         return model.getUserInfo();
+    }
+
+    public boolean findUser(String userName) {
+        return model.findUser(userName);
+    }
+
+    public String getCurrentUser() {
+        return model.getCurrentUser();
     }
 }
