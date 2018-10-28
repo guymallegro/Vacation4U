@@ -2,39 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="febd1388-bbc9-49e7-9407-a87fa9bcb708" name="Default Changelist" comment="Maven Project">
-      <change beforePath="" afterPath="$PROJECT_DIR$/Vacation4U/sqlite-jdbc-3.23.1.jar" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_xerial_sqlite_jdbc_3_25_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_xerial_sqlite_jdbc_3_23_1.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_xerial_sqlite_jdbc_3_23_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_xerial_sqlite_jdbc_3_23_1.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/maybenow/maybenow.iml" afterPath="$PROJECT_DIR$/Vacation4U/maybenow.iml" />
-      <change beforePath="$PROJECT_DIR$/maybenow/out/production/maybenow/resources/logovacation4u.png" afterPath="$PROJECT_DIR$/Vacation4U/out/production/maybenow/resources/logovacation4u.png" />
-      <change beforePath="$PROJECT_DIR$/maybenow/out/production/maybenow/sample/Controller.class" afterPath="$PROJECT_DIR$/Vacation4U/out/production/maybenow/sample/Controller.class" />
-      <change beforePath="$PROJECT_DIR$/maybenow/out/production/maybenow/sample/Main.class" afterPath="$PROJECT_DIR$/Vacation4U/out/production/maybenow/sample/Main.class" />
-      <change beforePath="$PROJECT_DIR$/maybenow/out/production/maybenow/sample/MainMenu.fxml" afterPath="$PROJECT_DIR$/Vacation4U/out/production/maybenow/sample/MainMenu.fxml" />
-      <change beforePath="$PROJECT_DIR$/maybenow/out/production/maybenow/sample/Model.class" afterPath="$PROJECT_DIR$/Vacation4U/out/production/maybenow/sample/Model.class" />
-      <change beforePath="$PROJECT_DIR$/maybenow/out/production/maybenow/sample/Registration.fxml" afterPath="$PROJECT_DIR$/Vacation4U/out/production/maybenow/sample/Registration.fxml" />
-      <change beforePath="$PROJECT_DIR$/maybenow/out/production/maybenow/sample/SQLiteConnection.class" afterPath="$PROJECT_DIR$/Vacation4U/out/production/maybenow/sample/SQLiteConnection.class" />
-      <change beforePath="$PROJECT_DIR$/maybenow/pom.xml" afterPath="$PROJECT_DIR$/Vacation4U/pom.xml" />
-      <change beforePath="$PROJECT_DIR$/maybenow/src/main/java/sample/Controller.java" afterPath="$PROJECT_DIR$/Vacation4U/src/main/java/sample/Controller.java" />
-      <change beforePath="$PROJECT_DIR$/maybenow/src/main/java/sample/Model/Model.java" afterPath="$PROJECT_DIR$/Vacation4U/src/main/java/sample/Model/Model.java" />
-      <change beforePath="$PROJECT_DIR$/maybenow/src/main/java/sample/Model/SQLiteConnection.java" afterPath="$PROJECT_DIR$/Vacation4U/src/main/java/sample/Model/SQLiteConnection.java" />
-      <change beforePath="$PROJECT_DIR$/maybenow/src/main/java/sample/View/Main.java" afterPath="$PROJECT_DIR$/Vacation4U/src/main/java/sample/View/Main.java" />
-      <change beforePath="$PROJECT_DIR$/maybenow/src/main/java/sample/View/MainMenuView.java" afterPath="$PROJECT_DIR$/Vacation4U/src/main/java/sample/View/MainMenuView.java" />
-      <change beforePath="$PROJECT_DIR$/maybenow/src/main/java/sample/View/OperationView.java" afterPath="$PROJECT_DIR$/Vacation4U/src/main/java/sample/View/OperationView.java" />
-      <change beforePath="$PROJECT_DIR$/maybenow/src/main/java/sample/View/RegistrationView.java" afterPath="$PROJECT_DIR$/Vacation4U/src/main/java/sample/View/RegistrationView.java" />
-      <change beforePath="$PROJECT_DIR$/maybenow/src/main/java/sample/View/SearchView.java" afterPath="$PROJECT_DIR$/Vacation4U/src/main/java/sample/View/SearchView.java" />
-      <change beforePath="$PROJECT_DIR$/maybenow/src/main/java/sample/View/UpdateView.java" afterPath="$PROJECT_DIR$/Vacation4U/src/main/java/sample/View/UpdateView.java" />
-      <change beforePath="$PROJECT_DIR$/maybenow/src/main/java/sample/View/View.java" afterPath="$PROJECT_DIR$/Vacation4U/src/main/java/sample/View/View.java" />
-      <change beforePath="$PROJECT_DIR$/maybenow/src/main/resources/MainMenu.fxml" afterPath="$PROJECT_DIR$/Vacation4U/src/main/resources/MainMenu.fxml" />
-      <change beforePath="$PROJECT_DIR$/maybenow/src/main/resources/Operation.fxml" afterPath="$PROJECT_DIR$/Vacation4U/src/main/resources/Operation.fxml" />
-      <change beforePath="$PROJECT_DIR$/maybenow/src/main/resources/Registration.fxml" afterPath="$PROJECT_DIR$/Vacation4U/src/main/resources/Registration.fxml" />
-      <change beforePath="$PROJECT_DIR$/maybenow/src/main/resources/Search.fxml" afterPath="$PROJECT_DIR$/Vacation4U/src/main/resources/Search.fxml" />
-      <change beforePath="$PROJECT_DIR$/maybenow/src/main/resources/Update.fxml" afterPath="$PROJECT_DIR$/Vacation4U/src/main/resources/Update.fxml" />
-      <change beforePath="$PROJECT_DIR$/maybenow/src/main/resources/ViewStyle.css" afterPath="$PROJECT_DIR$/Vacation4U/src/main/resources/ViewStyle.css" />
-      <change beforePath="$PROJECT_DIR$/maybenow/src/main/resources/logovacation4u.png" afterPath="$PROJECT_DIR$/Vacation4U/src/main/resources/logovacation4u.png" />
+      <change beforePath="$PROJECT_DIR$/Vacation4U/maybenow.iml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Vacation4U/pom.xml" afterPath="$PROJECT_DIR$/Vacation4U/pom.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/maybenow/target/" />
+    <ignored path="$PROJECT_DIR$/Vacation4U/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -109,8 +86,8 @@
       <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Vacation4U/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="404">
-              <caret line="33" column="13" lean-forward="false" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="13" />
+            <state relative-caret-position="218">
+              <caret line="48" column="0" lean-forward="false" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -130,6 +107,7 @@
       <find>onac</find>
       <find>#back</find>
       <find>back</find>
+      <find>-</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -157,6 +135,7 @@
         <option value="$PROJECT_DIR$/maybenow/src/main/java/sample/Controller.java" />
         <option value="$PROJECT_DIR$/maybenow/src/main/java/sample/View/Main.java" />
         <option value="$PROJECT_DIR$/maybenow/pom.xml" />
+        <option value="$PROJECT_DIR$/Vacation4U/pom.xml" />
       </list>
     </option>
   </component>
@@ -199,7 +178,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540529498408" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Vacation4U_Mx3E_AD2019-master" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Vacation4U/sqlite-jdbc-3.23.1.jar!/" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -237,6 +216,18 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="ENABLE_SWING_INSPECTOR" value="false" />
       <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="Vacation4U" />
+      <envs />
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="maybenow" />
       <envs />
@@ -277,7 +268,14 @@
       <option name="project" value="LOCAL" />
       <updated>1540740435079</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Maven Project">
+      <created>1540740817931</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1540740817931</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -343,13 +341,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/maybenow/src/sample/Model.java" />
-    <entry file="file://$PROJECT_DIR$/Vacation4U/maybenow.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="9" lean-forward="true" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/softwares/jdk1.8.0_181/javafx-src.zip!/javafx/fxml/FXMLLoader.java" />
     <entry file="jar://$USER_HOME$/softwares/jdk1.8.0_181/javafx-src.zip!/javafx/event/Event.java" />
     <entry file="file://$PROJECT_DIR$/maybenow/src/sample/Sources.java" />
@@ -423,10 +414,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Vacation4U/Vacation4U.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="370">
+          <caret line="14" column="9" lean-forward="true" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Vacation4U/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="404">
-          <caret line="33" column="13" lean-forward="false" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="13" />
+        <state relative-caret-position="218">
+          <caret line="48" column="0" lean-forward="false" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -483,7 +482,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>maybenow</last-edited>
+          <last-edited>Vacation4U</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -507,7 +506,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>Maven: org.xerial:sqlite-jdbc:3.25.2</last-edited>
+          <last-edited>Maven: org.xerial:sqlite-jdbc:3.23.1</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
