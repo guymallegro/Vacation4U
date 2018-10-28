@@ -51,9 +51,6 @@
     <artifactId>sqlite-jdbc</artifactId>
     <version>3.23.1</version>
     <scope>system</scope>
-        <systemPath>${basedir}/sqlite-jdbc-3.23.1.jar</systemPath>
-
-
 </dependency>
 
 </dependencies>
