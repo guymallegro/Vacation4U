@@ -6,6 +6,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.text.Text;
 
 import javax.swing.text.StyledEditorKit;
@@ -14,7 +15,7 @@ import java.time.LocalDate;
 import java.util.ResourceBundle;
 
 
-public class UpdateView extends View implements Initializable {
+public class UpdateView extends View {
 
     public TextField userName;
     public PasswordField password;
@@ -34,20 +35,16 @@ public class UpdateView extends View implements Initializable {
         controller.setScreen(Main.OPERATION_SCREEN);
     }
 
-    @Override
-    public void initialize(URL location, ResourceBundle resources) {
-        userName.focusedProperty().addListener((ov, oldV, newV) -> {
-            if (newV) {
-                controller.getInfo(controller.getCurrentUser());
-                userName.setText(controller.getUserInfo().get("username"));
-                password.setText(controller.getUserInfo().get("password"));
-                firstName.setText(controller.getUserInfo().get("firstName"));
-                lastName.setText(controller.getUserInfo().get("lastName"));
-                city.setText(controller.getUserInfo().get("city"));
-                birth.setText(controller.getUserInfo().get("birth"));
-                resetErrors();
-            }
-        });
+
+    public void init(MouseEvent mouseEvent) {
+        controller.getInfo(controller.getCurrentUser());
+        userName.setText(controller.getUserInfo().get("username"));
+        password.setText(controller.getUserInfo().get("password"));
+        firstName.setText(controller.getUserInfo().get("firstName"));
+        lastName.setText(controller.getUserInfo().get("lastName"));
+        city.setText(controller.getUserInfo().get("city"));
+        birth.setText(controller.getUserInfo().get("birth"));
+        resetErrors();
     }
 
     public void updateInfo(ActionEvent actionEvent) {
@@ -79,6 +76,10 @@ public class UpdateView extends View implements Initializable {
         if (city.getText().equals("")) {
             result = false;
             cityError.setVisible(true);
+        }
+        if (birth.getText().equals("")) {
+            result = false;
+            birthDateError.setVisible(true);
         }
         if (controller.findUser(userName.getText()) && !controller.getCurrentUser().equals(userName.getText())) {
             result = false;

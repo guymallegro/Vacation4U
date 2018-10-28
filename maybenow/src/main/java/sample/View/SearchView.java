@@ -3,6 +3,7 @@ package sample.View;
 import javafx.event.ActionEvent;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
+import javafx.scene.input.MouseEvent;
 import sample.Model.Model;
 
 public class SearchView extends View {
@@ -30,5 +31,13 @@ public class SearchView extends View {
             alert.setContentText("The user you searched for does not exist Please try again");
             alert.showAndWait();
         }
+    }
+
+    public void init(MouseEvent mouseEvent) {
+        userName.setText("");
+        birth.setText("");
+        firstName.setText("");
+        lastName.setText("");
+        city.setText("");
     }
 }
