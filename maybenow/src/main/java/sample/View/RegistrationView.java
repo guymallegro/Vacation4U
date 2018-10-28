@@ -23,17 +23,9 @@ public class RegistrationView extends View {
     public javafx.scene.text.Text cityError;
 
     public void RegisterUser() throws SQLException {
-        if(!validation()){return;}
 
+        if(!validation()){return;}
         LocalDate date = birth.getValue();
-        int year = 2018;
-        if (date != null) {
-            year = date.getYear();
-        }
-        if (2018 - year < 18) {
-            badage.setVisible(true);
-            return;
-        }
         if (controller.registerUser(userName.getText(), password.getText(), date, firstName.getText(), lastName.getText(), city.getText())) {
             System.out.println("Register User successful!!");
             badage.setVisible(false);
@@ -70,7 +62,17 @@ public class RegistrationView extends View {
     }
 
     private boolean validation() {
+
+        LocalDate date = birth.getValue();
+        int year = 2018;
         boolean result = true;
+        if (date != null) {
+            year = date.getYear();
+        }
+        if (2018 - year < 18) {
+            badage.setVisible(true);
+            result= false;
+        }
         if (userName.getText().equals("")) {
             result = false;
             userNameError.setVisible(true);
