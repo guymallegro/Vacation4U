@@ -23,8 +23,7 @@ public class RegistrationView extends View {
     public javafx.scene.text.Text cityError;
 
     public void RegisterUser() throws SQLException {
-
-        validation();
+        if(!validation()){return;}
 
         LocalDate date = birth.getValue();
         int year = 2018;
