@@ -55,11 +55,15 @@ public class Controller {
         model.setCurrentUser(userName);
     }
 
+    public HashMap<String,String> searchUser(String userName) {
+        return model.searchUser(userName);
+    }
+
     public void getInfo(String userName) {
         model.getInfo(userName);
     }
 
-    public Model getModel() {
-        return model;
+    public HashMap<String, String> getUserInfo(){
+        return model.getUserInfo();
     }
 }

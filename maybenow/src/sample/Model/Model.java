@@ -71,6 +71,25 @@ public class Model {
         return true;
     }
 
+    public HashMap<String,String> searchUser(String userName) {
+        userInfo = new HashMap<>();
+        String sql = "SELECT username,birth,firstName,lastName,city " +
+                "FROM users WHERE username = ?";
+
+        try (PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
+            preparedStatement.setString(1, userName);
+            ResultSet rs = preparedStatement.executeQuery();
+            userInfo.put("username", rs.getString("username"));
+            userInfo.put("birth", rs.getString("birth"));
+            userInfo.put("firstName", rs.getString("firstName"));
+            userInfo.put("lastName", rs.getString("lastName"));
+            userInfo.put("city", rs.getString("city"));
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+        return userInfo;
+    }
+
     public void getInfo(String userName) {
         userInfo = new HashMap<>();
         String sql = "SELECT username,password,birth,firstName,lastName,city " +

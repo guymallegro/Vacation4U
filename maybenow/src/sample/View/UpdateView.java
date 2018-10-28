@@ -37,11 +37,11 @@ public class UpdateView extends View implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
         userName.focusedProperty().addListener((ov, oldV, newV) -> {
             if (newV) {
-                userName.setText(controller.getModel().getUserInfo().get("username"));
-                password.setText(controller.getModel().getUserInfo().get("password"));
-                firstName.setText(controller.getModel().getUserInfo().get("firstName"));
-                lastName.setText(controller.getModel().getUserInfo().get("lastName"));
-                city.setText(controller.getModel().getUserInfo().get("city"));
+                userName.setText(controller.getUserInfo().get("username"));
+                password.setText(controller.getUserInfo().get("password"));
+                firstName.setText(controller.getUserInfo().get("firstName"));
+                lastName.setText(controller.getUserInfo().get("lastName"));
+                city.setText(controller.getUserInfo().get("city"));
                 resetErrors();
             }
         });
@@ -90,4 +90,5 @@ public class UpdateView extends View implements Initializable {
         cityError.setVisible(false);
         updateSucc.setVisible(false);
     }
+
 }
