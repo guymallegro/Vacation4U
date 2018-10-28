@@ -47,7 +47,7 @@ public class Controller {
         return model.RegisterUser(userName, password, date, firstName, lastName, city);
     }
 
-    public void updateUser(String userName, String password, String birth, String firstName, String lastName, String city) {
+    public void updateUser(String userName, String password, LocalDate birth, String firstName, String lastName, String city) {
         model.updateUser(userName, password, birth, firstName, lastName, city);
     }
 

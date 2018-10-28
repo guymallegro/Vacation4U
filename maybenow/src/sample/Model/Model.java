@@ -49,7 +49,7 @@ public class Model {
         return true;
     }
 
-    public boolean updateUser(String userName, String password, String birth, String firstName, String lastName, String city) {
+    public boolean updateUser(String userName, String password, LocalDate date, String firstName, String lastName, String city) {
         String sql = "UPDATE users SET username = ?, password = ?, birth = ?, firstName = ?, lastName = ?, city = ?"
                 + "  WHERE username = ?";
 
@@ -57,7 +57,8 @@ public class Model {
              PreparedStatement pstmt = conn.prepareStatement(sql)) {
             pstmt.setString(1, userName);
             pstmt.setString(2, password);
-            pstmt.setString(3, birth);
+            String strdate = date.getDayOfMonth() + "/" + date.getMonthValue() + "/" + date.getYear();
+            pstmt.setString(3, strdate);
             pstmt.setString(4, firstName);
             pstmt.setString(5, lastName);
             pstmt.setString(6, city);

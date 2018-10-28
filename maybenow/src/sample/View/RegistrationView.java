@@ -14,7 +14,7 @@ public class RegistrationView extends View {
     public TextField firstName;
     public TextField lastName;
     public TextField city;
-    public javafx.scene.text.Text incorrect;
+    public javafx.scene.text.Text userNameTaken;
     public javafx.scene.text.Text badage;
 
     public void RegisterUser() throws SQLException {
@@ -28,11 +28,11 @@ public class RegistrationView extends View {
         if (controller.registerUser(userName.getText(),password.getText(),date,firstName.getText(),lastName.getText(),city.getText())) {
             System.out.println("Register User successful!!");
             badage.setVisible(false);
-            incorrect.setVisible(false);
+            userNameTaken.setVisible(false);
             controller.setScreen(Main.MAIN_MENU_SCREEN);
         }
         else
-            incorrect.setVisible(true);
+            userNameTaken.setVisible(true);
         badage.setVisible(false);
     }
     public void back(ActionEvent actionEvent){
