@@ -1,18 +1,10 @@
 package sample.View;
 
-import com.sun.org.apache.xpath.internal.operations.Bool;
 import javafx.event.ActionEvent;
-import javafx.fxml.Initializable;
-import javafx.scene.control.DatePicker;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.text.Text;
-
-import javax.swing.text.StyledEditorKit;
-import java.net.URL;
-import java.time.LocalDate;
-import java.util.ResourceBundle;
 
 
 public class UpdateView extends View {
