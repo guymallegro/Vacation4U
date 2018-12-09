@@ -12,7 +12,8 @@ public class Main extends Application {
     public static final String UPDATE_SCREEN = "Update.fxml";
     public static final String OPERATION_SCREEN = "Operation.fxml";
     public static final String SEARCH_SCREEN = "Search.fxml";
-
+    public static final String ADD_VACCATION = "AddVaction.fxml";
+    public static final String  Search_VACCATION="SearchVacation.fxml";
     @Override
     public void start(Stage primaryStage) {
         Model model = new Model();
@@ -25,6 +26,8 @@ public class Main extends Application {
         controller.loadScreen(UPDATE_SCREEN);
         controller.loadScreen(OPERATION_SCREEN);
         controller.loadScreen(SEARCH_SCREEN);
+        controller.loadScreen(ADD_VACCATION);
+        controller.loadScreen(Search_VACCATION);
         controller.initScreen();
         theStage.setTitle("Vacation4U");
     }

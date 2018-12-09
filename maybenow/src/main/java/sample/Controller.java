@@ -8,6 +8,7 @@ import sample.Model.Model;
 
 import java.sql.SQLException;
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.HashMap;
 
 public class Controller {
@@ -51,6 +52,10 @@ public class Controller {
         return model.updateUser(userName, password, birth, firstName, lastName, city);
     }
 
+    public boolean AddVacation(String UserName,String AirlineCompany,LocalDate Startdate,LocalDate Enddate,String TicketNum,String country,boolean IsIncludeReturnFlight,String TicketType,boolean IsIncludeaccommodation,String Nameaccommodation,String Price){
+        return model.AddVacation(UserName, AirlineCompany, Startdate, Enddate, TicketNum, country, IsIncludeReturnFlight, TicketType, IsIncludeaccommodation, Nameaccommodation, Price);
+    }
+
     public void setCurrentUser(String userName) {
         model.setCurrentUser(userName);
     }
@@ -62,7 +67,6 @@ public class Controller {
     public void getInfo(String userName) {
         model.getInfo(userName);
     }
-
     public HashMap<String, String> getUserInfo() {
         return model.getUserInfo();
     }
@@ -71,11 +75,21 @@ public class Controller {
         return model.findUser(userName);
     }
 
+    public boolean AddPayment(String VaccationID, String CardOwner,String CreditCardNum ,LocalDate Validation){
+        return model.AddPayment(VaccationID, CardOwner, CreditCardNum, Validation);
+    }
     public String getCurrentUser() {
         return model.getCurrentUser();
     }
 
     public void DeleteUser() {
         model.DeleteUser();
+    }
+    public HashMap<String, String> getVacationDetalies(String VacationID){
+        return model.GetVacationDetalies(VacationID);
+    }
+
+    public ArrayList<String> getVacationResults(String text) {
+        return model.getVacationResults(text);
     }
 }

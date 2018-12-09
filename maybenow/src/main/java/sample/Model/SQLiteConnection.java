@@ -33,10 +33,35 @@ public class SQLiteConnection {
                 + "	city text NOT NULL\n"
                 + ");";
 
+        String sql2 = "CREATE TABLE IF NOT EXISTS vaccations (\n"
+                + "	VacationID text PRIMARY KEY,\n"
+                + "	UserName text NOT NULL,\n"
+                + "	airlinecompany text NOT NULL,\n"
+                + "	StartDate text real,\n"
+                + "	EndDate text real,\n"
+                + "	TicketNumber text NOT NULL,\n"
+                + "	StateName text NOT NULL,\n"
+                + "	IsIncludeReturnFlight text NOT NULL,\n"
+                + "	TicketType text NOT NULL,\n"
+                + "	IsIncludeRoomaccommodation text NOT NULL,\n"
+                + "	Nameaccommodation text,\n"
+                + "	Price text\n"
+                + ");";
+
+        String sql3 = "CREATE TABLE IF NOT EXISTS Payments (\n"
+                + "	VaccationID text NOT NULL,\n"
+                + "	CardOwner text real,\n"
+                + "	CreditCardNum text NOT NULL,\n"
+                + "	Validation text NOT NULL\n"
+                + ");";
+
         try (Connection conn = DriverManager.getConnection(url);
              Statement stmt = conn.createStatement()) {
             // create a new table
             stmt.execute(sql);
+            stmt.execute(sql2);
+            stmt.execute(sql3);
+
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         }

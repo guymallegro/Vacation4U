@@ -17,6 +17,7 @@ public class OperationView extends View {
     public Button DeleteAccount;
     public Button SearchAccount;
     public Text welcome;
+    public Button AddVacation;
 
     public void UpdateAccount(ActionEvent actionEvent) {
         controller.setScreen(Main.UPDATE_SCREEN);
@@ -27,7 +28,9 @@ public class OperationView extends View {
     }
 
     public void Logout(ActionEvent actionEvent) {
+
         controller.setScreen(Main.MAIN_MENU_SCREEN);
+        controller.setCurrentUser("");
     }
 
     public void DeleteAccount(ActionEvent actionEvent) {
@@ -48,5 +51,17 @@ public class OperationView extends View {
 
     public void setWelcomeMessage(MouseEvent mouseEvent) {
         welcome.setText("Welcome "+controller.getUserInfo().get("firstName")+"!");
+    }
+
+    public void AddVaction(){
+        controller.setScreen(Main.ADD_VACCATION
+
+        );
+    }
+
+    public void SearchVacation(){
+
+        controller.setScreen(Main.Search_VACCATION);
+
     }
 }
