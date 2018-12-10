@@ -31,7 +31,7 @@ public class MainMenuView extends View {
 
 
 
-    public void SearchVaccationNoRegisteration(){
-        controller.setScreen(Main.Search_VACCATION);
+    public void SearchvacationNoRegisteration(){
+        controller.setScreen(Main.Search_vacation);
     }
 }

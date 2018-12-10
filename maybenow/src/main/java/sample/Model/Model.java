@@ -31,12 +31,12 @@ public class Model {
 
 
 
-    public boolean AddPayment(String VaccationID, String CardOwner,String CreditCardNum ,LocalDate Validation) {
+    public boolean AddPayment(String vacationID, String CardOwner,String CreditCardNum ,LocalDate Validation) {
 
-        String sql = "INSERT INTO Payments(VaccationID,CardOwner,CreditCardNum,Validation) VALUES(?,?,?,?)";
+        String sql = "INSERT INTO Payments(vacationID,CardOwner,CreditCardNum,Validation) VALUES(?,?,?,?)";
         try (Connection conn = SQLiteConnection.Connector();
              PreparedStatement pstmt = conn.prepareStatement(sql)) {
-            pstmt.setString(1, VaccationID);
+            pstmt.setString(1, vacationID);
             pstmt.setString(2, CardOwner);
             pstmt.setString(3, CreditCardNum);
             String strdate = Validation.getDayOfMonth() + "/" + Validation.getMonthValue() + "/" + Validation.getYear();
@@ -56,7 +56,7 @@ public class Model {
 
 
     public boolean AddVacation(String UserName,String AirlineCompany,LocalDate Startdate,LocalDate Enddate,String TicketNum,String country,boolean IsIncludeReturnFlight,String TicketType,boolean IsIncludeaccommodation,String Nameaccommodation,String Price){
-        String sql = "INSERT INTO vaccations(VacationID,UserName,airlinecompany,StartDate,EndDate,TicketNumber,StateName,IsIncludeReturnFlight,TicketType,IsIncludeRoomaccommodation,Nameaccommodation,Price) VALUES(?,?,?,?,?,?,?,?,?,?,?,?)";
+        String sql = "INSERT INTO vacations(VacationID,UserName,airlinecompany,StartDate,EndDate,TicketNumber,StateName,IsIncludeReturnFlight,TicketType,IsIncludeRoomaccommodation,Nameaccommodation,Price) VALUES(?,?,?,?,?,?,?,?,?,?,?,?)";
         try (Connection conn = SQLiteConnection.Connector();
              PreparedStatement pstmt = conn.prepareStatement(sql)) {
 
@@ -161,30 +161,30 @@ public class Model {
     }
 
     public HashMap<String, String> GetVacationDetalies(String VacationID) {
-        HashMap<String, String> VaccationDetailes = new HashMap<>();
+        HashMap<String, String> vacationDetailes = new HashMap<>();
         String sql = "SELECT VacationID,UserName,airlinecompany,StartDate,EndDate,TicketNumber,StateName" +
                 ",IsIncludeReturnFlight,TicketType,IsIncludeRoomaccommodation,Nameaccommodation,Price " +
-                "FROM vaccations WHERE VacationID = ?";
+                "FROM vacations WHERE VacationID = ?";
 
         try (PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
             preparedStatement.setString(1, VacationID);
             ResultSet rs = preparedStatement.executeQuery();
-            VaccationDetailes.put("UserName", rs.getString("UserName"));
-            VaccationDetailes.put("airlinecompany", rs.getString("airlinecompany"));
-            VaccationDetailes.put("StartDate", rs.getString("StartDate"));
-            VaccationDetailes.put("EndDate", rs.getString("EndDate"));
-            VaccationDetailes.put("TicketNumber", rs.getString("TicketNumber"));
-            VaccationDetailes.put("StateName", rs.getString("StateName"));
-            VaccationDetailes.put("IsIncludeReturnFlight", rs.getString("IsIncludeReturnFlight"));
-            VaccationDetailes.put("TicketType", rs.getString("TicketType"));
-            VaccationDetailes.put("IsIncludeRoomaccommodation", rs.getString("IsIncludeRoomaccommodation"));
-            VaccationDetailes.put("Nameaccommodation", rs.getString("Nameaccommodation"));
-            VaccationDetailes.put("Price", rs.getString("Price"));
+            vacationDetailes.put("UserName", rs.getString("UserName"));
+            vacationDetailes.put("airlinecompany", rs.getString("airlinecompany"));
+            vacationDetailes.put("StartDate", rs.getString("StartDate"));
+            vacationDetailes.put("EndDate", rs.getString("EndDate"));
+            vacationDetailes.put("TicketNumber", rs.getString("TicketNumber"));
+            vacationDetailes.put("StateName", rs.getString("StateName"));
+            vacationDetailes.put("IsIncludeReturnFlight", rs.getString("IsIncludeReturnFlight"));
+            vacationDetailes.put("TicketType", rs.getString("TicketType"));
+            vacationDetailes.put("IsIncludeRoomaccommodation", rs.getString("IsIncludeRoomaccommodation"));
+            vacationDetailes.put("Nameaccommodation", rs.getString("Nameaccommodation"));
+            vacationDetailes.put("Price", rs.getString("Price"));
 
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         }
-        return VaccationDetailes;
+        return vacationDetailes;
     }
 
 
@@ -216,7 +216,7 @@ public class Model {
     }
 
     public int getNumberOfVacationInDB(){
-        String sql ="SELECT Count(*) AS VacationID FROM vaccations";
+        String sql ="SELECT Count(*) AS VacationID FROM vacations";
         try (PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
             ResultSet rs = preparedStatement.executeQuery();
 
@@ -263,7 +263,7 @@ public class Model {
     public ArrayList<String> getVacationResults(String Country) {
         ArrayList<String> VacationNumbers = new ArrayList<>();
         String sql = "SELECT VacationID "
-                + "FROM vaccations WHERE StateName  = ?";
+                + "FROM vacations WHERE StateName  = ?";
 
 
         try (

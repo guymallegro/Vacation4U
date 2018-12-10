@@ -54,14 +54,14 @@ public class OperationView extends View {
     }
 
     public void AddVaction(){
-        controller.setScreen(Main.ADD_VACCATION
+        controller.setScreen(Main.ADD_vacation
 
         );
     }
 
     public void SearchVacation(){
 
-        controller.setScreen(Main.Search_VACCATION);
+        controller.setScreen(Main.Search_vacation);
 
     }
 }

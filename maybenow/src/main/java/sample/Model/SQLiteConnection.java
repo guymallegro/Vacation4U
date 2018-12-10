@@ -33,7 +33,7 @@ public class SQLiteConnection {
                 + "	city text NOT NULL\n"
                 + ");";
 
-        String sql2 = "CREATE TABLE IF NOT EXISTS vaccations (\n"
+        String sql2 = "CREATE TABLE IF NOT EXISTS vacations (\n"
                 + "	VacationID text PRIMARY KEY,\n"
                 + "	UserName text NOT NULL,\n"
                 + "	airlinecompany text NOT NULL,\n"
@@ -49,7 +49,7 @@ public class SQLiteConnection {
                 + ");";
 
         String sql3 = "CREATE TABLE IF NOT EXISTS Payments (\n"
-                + "	VaccationID text NOT NULL,\n"
+                + "	vacationID text NOT NULL,\n"
                 + "	CardOwner text real,\n"
                 + "	CreditCardNum text NOT NULL,\n"
                 + "	Validation text NOT NULL\n"

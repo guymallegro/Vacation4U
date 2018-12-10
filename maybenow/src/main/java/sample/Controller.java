@@ -75,8 +75,8 @@ public class Controller {
         return model.findUser(userName);
     }
 
-    public boolean AddPayment(String VaccationID, String CardOwner,String CreditCardNum ,LocalDate Validation){
-        return model.AddPayment(VaccationID, CardOwner, CreditCardNum, Validation);
+    public boolean AddPayment(String vacationID, String CardOwner,String CreditCardNum ,LocalDate Validation){
+        return model.AddPayment(vacationID, CardOwner, CreditCardNum, Validation);
     }
     public String getCurrentUser() {
         return model.getCurrentUser();

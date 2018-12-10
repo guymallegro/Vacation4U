@@ -9,8 +9,8 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="400.0" prefWidth="700.0" style="-fx-background-color: #edc157;" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.View.AddVactionView">
-    <Text fill="WHITE" layoutX="206.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="AddVacation" textAlignment="CENTER" wrappingWidth="239.7294921875">
+<AnchorPane prefHeight="400.0" prefWidth="700.0" style="-fx-background-color: #edc157;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.View.AddVacationView">
+    <Text fill="WHITE" layoutX="206.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add Vacation" textAlignment="CENTER" wrappingWidth="239.7294921875">
         <font>
             <Font size="30.0" />
         </font>
@@ -46,40 +46,8 @@
             <Font size="18.0" />
         </font>
     </Button>
-    <Text fx:id="incorrect" fill="#ff0e0e" layoutX="157.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User name already exists" visible="false" wrappingWidth="180.7294921875">
-        <font>
-            <Font name="System Bold" size="15.0" />
-        </font>
-    </Text>
     <DatePicker fx:id="StartDate" layoutX="14.0" layoutY="126.0" prefHeight="20.0" prefWidth="226.0" stylesheets="dateColor.css" />
-    <Text fx:id="badTicNum" fill="#ff0e0e" layoutX="160.0" layoutY="270.0" strokeType="OUTSIDE" strokeWidth="0.0" text="The Field Must be Number" visible="false" wrappingWidth="195.7294921875">
-    </Text>
 
-    <Text fx:id="userNameError" fill="RED" layoutX="156.0" layoutY="108.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User name is already taken" visible="false" wrappingWidth="182.7294921875">
-        <font>
-            <Font size="12.0" />
-        </font>
-    </Text>
-    <Text fx:id="passWordError" fill="RED" layoutX="156.0" layoutY="178.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password can not be empty" visible="false" wrappingWidth="182.7294921875">
-        <font>
-            <Font size="12.0" />
-        </font>
-    </Text>
-    <Text fx:id="firstNameError" fill="RED" layoutX="492.0" layoutY="109.0" strokeType="OUTSIDE" strokeWidth="0.0" text="First name can not be empty" visible="false" wrappingWidth="182.7294921875">
-        <font>
-            <Font size="12.0" />
-        </font>
-    </Text>
-    <Text fx:id="lastNameError" fill="RED" layoutX="492.0" layoutY="179.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Last name can not be empty" visible="false" wrappingWidth="182.7294921875">
-        <font>
-            <Font size="12.0" />
-        </font>
-    </Text>
-    <Text fx:id="badRank" fill="RED" layoutX="492.0" layoutY="297.0" strokeType="OUTSIDE" strokeWidth="0.0" text="The Field is Number 1-5" visible="false" wrappingWidth="182.7294921875">
-        <font>
-            <Font size="12.0" />
-        </font>
-    </Text>
    <Text fill="WHITE" layoutX="14.0" layoutY="179.0" strokeType="OUTSIDE" strokeWidth="0.0" text="EndDate" wrappingWidth="162.7294921875">
       <font>
          <Font size="15.0" />
@@ -92,7 +60,7 @@
       </font>
    </Text>
    <TextField fx:id="TicketNumbers" layoutX="16.0" layoutY="251.0" prefHeight="26.0" prefWidth="96.0" style="-fx-background-color: #d6a900;" />
-   <CheckBox fx:id="IsIncludeAccommodation" layoutX="364.0" layoutY="165.0" mnemonicParsing="false" text="IsInclude accommodation?" />
+   <CheckBox fx:id="IsIncludeAccommodation" layoutX="364.0" layoutY="165.0" mnemonicParsing="false" text="Includes accommodation?" />
    <TextField fx:id="AccommodationName" layoutX="360.0" layoutY="219.0" prefHeight="10.0" prefWidth="225.0" style="-fx-background-color: #d6a900;" />
    <Text fill="WHITE" layoutX="14.0" layoutY="298.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Country Name" wrappingWidth="162.7294921875">
       <font>
@@ -100,7 +68,7 @@
       </font>
    </Text>
    <TextField fx:id="CountryName" layoutX="10.0" layoutY="305.0" prefHeight="10.0" prefWidth="225.0" style="-fx-background-color: #d6a900;" />
-   <CheckBox fx:id="IsIncludeReturnFlight" layoutX="364.0" layoutY="75.0" mnemonicParsing="false" text="IsInclude Return Flight?" />
+   <CheckBox fx:id="IsIncludeReturnFlight" layoutX="364.0" layoutY="75.0" mnemonicParsing="false" text="Includes return flight?" />
    <Text fill="WHITE" layoutX="363.0" layoutY="270.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" wrappingWidth="208.52948017418385">
       <font>
          <Font size="15.0" />
@@ -108,5 +76,29 @@
    </Text>
    <TextField fx:id="Price" layoutX="363.0" layoutY="284.0" prefHeight="26.0" prefWidth="77.0" style="-fx-background-color: #d6a900;" />
    <ComboBox fx:id="TicketType" layoutX="362.0" layoutY="135.0" prefWidth="150.0" />
+    <Text fx:id="companyError" fill="RED" layoutX="156.0" layoutY="117.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Must be filled" visible="false" wrappingWidth="182.7294921875">
+        <font>
+            <Font size="12.0" />
+        </font>
+    </Text>
+    <Text fx:id="startDateError" fill="RED" layoutX="157.0" layoutY="167.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Must be filled" visible="false" wrappingWidth="182.7294921875">
+        <font>
+            <Font size="12.0" />
+        </font>
+    </Text>
+   <Text fx:id="endDateError" fill="RED" layoutX="157.0" layoutY="226.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Must be filled" visible="false" wrappingWidth="182.7294921875">
+      <font>
+         <Font size="12.0" />
+      </font>
+   </Text>
+   <Text fx:id="countryNameError" fill="#ff0e0e" layoutX="41.0" layoutY="349.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Must be filled" visible="false" wrappingWidth="108.7294921875" />
+    <Text fx:id="badTicNum" fill="#ff0e0e" layoutX="123.0" layoutY="269.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Filed must be a number" visible="false" wrappingWidth="195.7294921875">
+    </Text>
+    <Text fx:id="priceError" fill="RED" layoutX="446.0" layoutY="302.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Field must be a number" visible="false" wrappingWidth="182.7294921875">
+        <font>
+            <Font size="12.0" />
+        </font>
+    </Text>
+   <Text fx:id="ticketTypeError" fill="#ff0e0e" layoutX="524.0" layoutY="152.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Must be filled" visible="false" wrappingWidth="108.7294921875" />
 
 </AnchorPane>
