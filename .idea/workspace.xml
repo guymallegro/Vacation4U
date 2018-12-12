@@ -1,24 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="febd1388-bbc9-49e7-9407-a87fa9bcb708" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/maybenow/src/main/java/sample/View/OrdersView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/maybenow/src/main/resources/Orders.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Vacation4uDB.db" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/maybenow/src/main/java/sample/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/maybenow/src/main/java/sample/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/maybenow/src/main/java/sample/Model/Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/maybenow/src/main/java/sample/Model/Model.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/maybenow/src/main/java/sample/Model/SQLiteConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/maybenow/src/main/java/sample/Model/SQLiteConnection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/maybenow/src/main/java/sample/View/AddVacationView.java" beforeDir="false" afterPath="$PROJECT_DIR$/maybenow/src/main/java/sample/View/AddVacationView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/maybenow/src/main/java/sample/View/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/maybenow/src/main/java/sample/View/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/maybenow/src/main/java/sample/View/OperationView.java" beforeDir="false" afterPath="$PROJECT_DIR$/maybenow/src/main/java/sample/View/OperationView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/maybenow/src/main/java/sample/View/PurchaseVacationView.java" beforeDir="false" afterPath="$PROJECT_DIR$/maybenow/src/main/java/sample/View/PurchaseVacationView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/maybenow/src/main/java/sample/View/SearchVacationView.java" beforeDir="false" afterPath="$PROJECT_DIR$/maybenow/src/main/java/sample/View/SearchVacationView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/maybenow/src/main/resources/AddVaction.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/maybenow/src/main/resources/AddVaction.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/maybenow/src/main/resources/Operation.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/maybenow/src/main/resources/Operation.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/maybenow/src/main/resources/PurchaseVaccation.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/maybenow/src/main/resources/PurchaseVacation.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/maybenow/src/main/resources/VacationDetailes.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/maybenow/src/main/resources/VacationDetails.fxml" afterDir="false" />
-    </list>
+    <list default="true" id="febd1388-bbc9-49e7-9407-a87fa9bcb708" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/maybenow/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -129,26 +112,26 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="fxml" value="214" />
-          <entry key="java" value="1835" />
-          <entry key="txt" value="72" />
+          <entry key="java" value="1836" />
+          <entry key="txt" value="147" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="1835" />
-          <entry key="PLAIN_TEXT" value="72" />
+          <entry key="JAVA" value="1836" />
+          <entry key="PLAIN_TEXT" value="147" />
           <entry key="XML" value="214" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="fxml" value="20" />
-          <entry key="java" value="67" />
+          <entry key="java" value="68" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="67" />
+          <entry key="JAVA" value="68" />
           <entry key="XML" value="20" />
         </counts>
       </usages-collector>
@@ -156,16 +139,36 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/maybenow/src/main/java/sample/View/SearchVacationView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="675">
-              <caret line="53" column="38" selection-start-line="53" selection-start-column="38" selection-end-line="53" selection-end-column="38" />
+            <state relative-caret-position="655">
+              <caret line="52" column="46" lean-forward="true" selection-start-line="52" selection-start-column="46" selection-end-line="52" selection-end-column="46" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#back#0;class#SearchVacationView#0" />
                 <element signature="e#5582#5583#0" expanded="true" />
                 <element signature="e#5631#5632#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/maybenow/src/main/java/sample/Model/Model.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="664">
+              <caret line="302" lean-forward="true" selection-start-line="302" selection-end-line="302" />
+              <folding>
+                <element signature="method#login#0;class#Model#0" />
+                <element signature="method#AddVacation#0;class#Model#0" />
+                <element signature="method#RegisterUser#0;class#Model#0" />
+                <element signature="method#searchUser#0;class#Model#0" />
+                <element signature="method#GetVacationDetalies#0;class#Model#0" />
+                <element signature="method#getInfo#0;class#Model#0" />
+                <element signature="method#getNumberOfVacationInDB#0;class#Model#0" />
+                <element signature="method#findUser#0;class#Model#0" />
+                <element signature="method#DeleteUser#0;class#Model#0" />
               </folding>
             </state>
           </provider>
@@ -257,9 +260,9 @@
         <option value="$PROJECT_DIR$/maybenow/src/main/java/sample/View/AddVacationView.java" />
         <option value="$PROJECT_DIR$/maybenow/src/main/java/sample/View/PurchaseVacationView.java" />
         <option value="$PROJECT_DIR$/maybenow/src/main/java/sample/Controller.java" />
-        <option value="$PROJECT_DIR$/maybenow/src/main/java/sample/Model/Model.java" />
         <option value="$PROJECT_DIR$/maybenow/src/main/java/sample/Model/SQLiteConnection.java" />
         <option value="$PROJECT_DIR$/maybenow/src/main/java/sample/View/SearchVacationView.java" />
+        <option value="$PROJECT_DIR$/maybenow/src/main/java/sample/Model/Model.java" />
       </list>
     </option>
   </component>
@@ -346,7 +349,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544632822858" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544633916921" />
     <property name="last_opened_file_path" value="$USER_HOME$/IdeaProjects/ATP - Project - PartC" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
@@ -465,7 +468,14 @@
       <option name="project" value="LOCAL" />
       <updated>1544476263909</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Added confirmation for orders and many improvements">
+      <created>1544632881326</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1544632881326</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -546,7 +556,8 @@
     <MESSAGE value="Maven fix" />
     <MESSAGE value="Task3" />
     <MESSAGE value="General improvements, added validation for vacation add&amp;search" />
-    <option name="LAST_COMMIT_MESSAGE" value="General improvements, added validation for vacation add&amp;search" />
+    <MESSAGE value="Added confirmation for orders and many improvements" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added confirmation for orders and many improvements" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -796,24 +807,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/maybenow/src/main/java/sample/Model/Model.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="33" selection-start-line="33" selection-end-line="33" />
-          <folding>
-            <element signature="method#login#0;class#Model#0" />
-            <element signature="method#AddVacation#0;class#Model#0" />
-            <element signature="method#RegisterUser#0;class#Model#0" />
-            <element signature="method#searchUser#0;class#Model#0" />
-            <element signature="method#GetVacationDetalies#0;class#Model#0" />
-            <element signature="method#getInfo#0;class#Model#0" />
-            <element signature="method#getNumberOfVacationInDB#0;class#Model#0" />
-            <element signature="method#findUser#0;class#Model#0" />
-            <element signature="method#DeleteUser#0;class#Model#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/maybenow/src/main/java/sample/Model/SQLiteConnection.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
@@ -830,13 +823,31 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/maybenow/src/main/java/sample/View/SearchVacationView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="53" column="38" selection-start-line="53" selection-start-column="38" selection-end-line="53" selection-end-column="38" />
+        <state relative-caret-position="655">
+          <caret line="52" column="46" lean-forward="true" selection-start-line="52" selection-start-column="46" selection-end-line="52" selection-end-column="46" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#back#0;class#SearchVacationView#0" />
             <element signature="e#5582#5583#0" expanded="true" />
             <element signature="e#5631#5632#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/maybenow/src/main/java/sample/Model/Model.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="664">
+          <caret line="302" lean-forward="true" selection-start-line="302" selection-end-line="302" />
+          <folding>
+            <element signature="method#login#0;class#Model#0" />
+            <element signature="method#AddVacation#0;class#Model#0" />
+            <element signature="method#RegisterUser#0;class#Model#0" />
+            <element signature="method#searchUser#0;class#Model#0" />
+            <element signature="method#GetVacationDetalies#0;class#Model#0" />
+            <element signature="method#getInfo#0;class#Model#0" />
+            <element signature="method#getNumberOfVacationInDB#0;class#Model#0" />
+            <element signature="method#findUser#0;class#Model#0" />
+            <element signature="method#DeleteUser#0;class#Model#0" />
           </folding>
         </state>
       </provider>

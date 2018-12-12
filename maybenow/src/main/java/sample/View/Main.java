@@ -2,7 +2,7 @@ package sample.View;
 
 import javafx.application.Application;
 import javafx.stage.Stage;
-import sample.Controller;
+import sample.Controller.Controller;
 import sample.Model.Model;
 
 public class Main extends Application {
