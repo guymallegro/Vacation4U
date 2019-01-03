@@ -5,6 +5,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import sample.View.Main;
 import sample.Model.Model;
+import sun.nio.cs.ext.MacCroatian;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -37,6 +38,11 @@ public class Controller {
 
     public void setScreen(String name) {
         Main.theStage.getScene().setRoot(screens.get(name));
+        if (name.equals(Main.ORDERS_SCREEN)) {
+            Main.theStage.setHeight(615);
+        } else {
+            Main.theStage.setHeight(430);
+        }
     }
 
     public boolean login(String userName, String password) {
