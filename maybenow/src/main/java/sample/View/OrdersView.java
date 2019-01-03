@@ -25,7 +25,7 @@ public class OrdersView extends View {
     public ScrollPane scrollpanelOther;
 
     public void init() {
-        ArrayList<String> vacationsUserIsSelling = controller.getVacationsUserIsSelling(controller.getCurrentUser());
+        ArrayList<String> vacationsUserIsSelling = controller.getVacationsUserIsSellingApproval(controller.getCurrentUser());
         ArrayList<String> vacationsUserIsInterested = controller.getVacationsUserIsInterested(controller.getCurrentUser());
         VBox root = new VBox();
         VBox rootOther = new VBox();
@@ -48,8 +48,8 @@ public class OrdersView extends View {
                         Scene scene = new Scene(loadScreen, 630, 400);
                         detailsWindow.setScene(scene);
                         VacationDetailesView VacationDetailcontroller2 = loader2.getController();
-                        HashMap<String, String> Detailes = controller.getVacationDetalies(id);
-                        VacationDetailcontroller2.setDetailes(Detailes.get("UserName"), Detailes.get("airlinecompany")
+                        HashMap<String, String> Detailes = controller.getVacationDetails(id);
+                        VacationDetailcontroller2.setDetails(Detailes.get("UserName"), Detailes.get("airlinecompany")
                                 , Detailes.get("StartDate"), Detailes.get("EndDate"), Detailes.get("TicketNumber"), Detailes.get("StateName"), (boolean) CastStringToBoolean(Detailes.get("IsIncludeReturnFlight")),
                                 Detailes.get("TicketType"), (boolean) CastStringToBoolean(Detailes.get("IsIncludeRoomaccommodation")), Detailes.get("Nameaccommodation"), Detailes.get("Price"));
                         detailsWindow.show();
@@ -98,8 +98,8 @@ public class OrdersView extends View {
                         Scene scene = new Scene(loadScreen, 630, 400);
                         detailsWindow.setScene(scene);
                         VacationDetailesView VacationDetailcontroller2 = loader2.getController();
-                        HashMap<String, String> Detailes = controller.getVacationDetalies(id);
-                        VacationDetailcontroller2.setDetailes(Detailes.get("UserName"), Detailes.get("airlinecompany")
+                        HashMap<String, String> Detailes = controller.getVacationDetails(id);
+                        VacationDetailcontroller2.setDetails(Detailes.get("UserName"), Detailes.get("airlinecompany")
                                 , Detailes.get("StartDate"), Detailes.get("EndDate"), Detailes.get("TicketNumber"), Detailes.get("StateName"), (boolean) CastStringToBoolean(Detailes.get("IsIncludeReturnFlight")),
                                 Detailes.get("TicketType"), (boolean) CastStringToBoolean(Detailes.get("IsIncludeRoomaccommodation")), Detailes.get("Nameaccommodation"), Detailes.get("Price"));
                         detailsWindow.show();

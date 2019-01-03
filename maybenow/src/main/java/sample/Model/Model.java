@@ -42,7 +42,7 @@ public class Model {
             pstmt.setString(5, "Pending");
             pstmt.executeUpdate();
         } catch (SQLException e) {
-             System.out.println(e.getMessage());
+            System.out.println(e.getMessage());
             return false;
         }
         return true;
@@ -201,7 +201,7 @@ public class Model {
         return currentUser;
     }
 
-    public int getNumberOfVacationInDB() {
+    private int getNumberOfVacationInDB() {
         String sql = "SELECT Count(*) AS VacationID FROM vacations";
         try (PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
             ResultSet rs = preparedStatement.executeQuery();
@@ -283,7 +283,7 @@ public class Model {
         return true;
     }
 
-    public ArrayList<String> getVacationsUserIsSelling(String userName) {
+    public ArrayList<String> getVacationsUserIsSellingApproval(String userName) {
         ArrayList<String> VacationNumbers = new ArrayList<>();
         String sql = "SELECT VacationID "
                 + "FROM vacations WHERE UserName  = ? AND Status = ?";
@@ -300,7 +300,24 @@ public class Model {
         }
 
         return VacationNumbers;
+    }
 
+    public ArrayList<String> getVacationsUserIsSelling(String userName) {
+        ArrayList<String> VacationNumbers = new ArrayList<>();
+        String sql = "SELECT * "
+                + "FROM vacations WHERE UserName  = ? AND Status = ?";
+        try (
+                PreparedStatement pstmt = connection.prepareStatement(sql)) {
+            pstmt.setString(1, userName);
+            pstmt.setString(2, "Waiting");
+            ResultSet rs = pstmt.executeQuery();
+            while (rs.next()) {
+                VacationNumbers.add(rs.getString("VacationID") +" , " +rs.getString("StateName") + " , " + rs.getString("StartDate") +" - "+ rs.getString("EndDate"));
+            }
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+        return VacationNumbers;
     }
 
     public ArrayList<String> getVacationsUserIsInterested(String userName) {

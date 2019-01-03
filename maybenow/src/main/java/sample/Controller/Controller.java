@@ -6,7 +6,6 @@ import javafx.scene.Scene;
 import sample.View.Main;
 import sample.Model.Model;
 
-import java.sql.SQLException;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -52,8 +51,8 @@ public class Controller {
         return model.updateUser(userName, password, birth, firstName, lastName, city);
     }
 
-    public boolean AddVacation(String UserName,String AirlineCompany,LocalDate Startdate,LocalDate Enddate,String TicketNum,String country,boolean IsIncludeReturnFlight,String TicketType,boolean IsIncludeaccommodation,String Nameaccommodation,String Price,String status,String interested){
-        return model.AddVacation(UserName, AirlineCompany, Startdate, Enddate, TicketNum, country, IsIncludeReturnFlight, TicketType, IsIncludeaccommodation, Nameaccommodation, Price,status,interested);
+    public boolean AddVacation(String UserName, String AirlineCompany, LocalDate Startdate, LocalDate Enddate, String TicketNum, String country, boolean IsIncludeReturnFlight, String TicketType, boolean IsIncludeaccommodation, String Nameaccommodation, String Price, String status, String interested) {
+        return model.AddVacation(UserName, AirlineCompany, Startdate, Enddate, TicketNum, country, IsIncludeReturnFlight, TicketType, IsIncludeaccommodation, Nameaccommodation, Price, status, interested);
     }
 
     public void setCurrentUser(String userName) {
@@ -67,6 +66,7 @@ public class Controller {
     public void getInfo(String userName) {
         model.getInfo(userName);
     }
+
     public HashMap<String, String> getUserInfo() {
         return model.getUserInfo();
     }
@@ -75,9 +75,10 @@ public class Controller {
         return model.findUser(userName);
     }
 
-    public boolean AddPayment(String vacationID, String CardOwner,String CreditCardNum ,LocalDate Validation){
+    public boolean AddPayment(String vacationID, String CardOwner, String CreditCardNum, LocalDate Validation) {
         return model.AddPayment(vacationID, CardOwner, CreditCardNum, Validation);
     }
+
     public String getCurrentUser() {
         return model.getCurrentUser();
     }
@@ -85,7 +86,8 @@ public class Controller {
     public void DeleteUser() {
         model.DeleteUser();
     }
-    public HashMap<String, String> getVacationDetalies(String VacationID){
+
+    public HashMap<String, String> getVacationDetails(String VacationID) {
         return model.GetVacationDetalies(VacationID);
     }
 
@@ -94,14 +96,18 @@ public class Controller {
     }
 
     public void addInterested(String vacationId, String userName) {
-        model.addInterested(vacationId,userName);
+        model.addInterested(vacationId, userName);
     }
 
-    public ArrayList<String> getVacationsUserIsSelling(String username){
-        return model.getVacationsUserIsSelling(username);
+    public ArrayList<String> getVacationsUserIsSellingApproval(String username) {
+        return model.getVacationsUserIsSellingApproval(username);
     }
 
-    public ArrayList<String> getVacationsUserIsInterested(String username){
+    public ArrayList<String> getVacationsUserIsSelling() {
+        return model.getVacationsUserIsSelling(getCurrentUser());
+    }
+
+    public ArrayList<String> getVacationsUserIsInterested(String username) {
         return model.getVacationsUserIsInterested(username);
     }
 
