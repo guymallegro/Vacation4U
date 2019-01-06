@@ -61,6 +61,7 @@ public class SearchVacationView extends View {
         root.setSpacing(10);
         for (String id :
                 vacationsIdForSpecificCountry) {
+            HashMap<String, String> Detailes = controller.getVacationDetails(id);
             Button b1 = new Button("details");
             b1.setOnAction(new EventHandler<ActionEvent>() {
                 @Override
@@ -75,7 +76,7 @@ public class SearchVacationView extends View {
                         Scene scene = new Scene(loadScreen, 630, 400);
                         detailsWindow.setScene(scene);
                         VacationDetailesView VacationDetailcontroller2 = loader.getController();
-                        HashMap<String, String> Detailes = controller.getVacationDetails(id);
+                        ;
                         VacationDetailcontroller2.setDetails(Detailes.get("UserName"), Detailes.get("airlinecompany")
                                 , Detailes.get("StartDate"), Detailes.get("EndDate"), Detailes.get("TicketNumber"), Detailes.get("StateName"), (boolean) CastStringToBoolean(Detailes.get("IsIncludeReturnFlight")),
                                 Detailes.get("TicketType"), (boolean) CastStringToBoolean(Detailes.get("IsIncludeRoomaccommodation")), Detailes.get("Nameaccommodation"), Detailes.get("Price"));
@@ -99,7 +100,7 @@ public class SearchVacationView extends View {
                             error.show();
                             return;
                         }
-                        controller.addInterested(id, controller.getCurrentUser());
+                        controller.addInterestedCash(id, controller.getCurrentUser());
                         Alert alert = new Alert(Alert.AlertType.INFORMATION);
                         alert.setTitle("Buy offer");
                         alert.setHeaderText(null);
@@ -126,26 +127,31 @@ public class SearchVacationView extends View {
                             error.show();
                             return;
                         }
-                        usersVacationsListView=new ListView<>();
+                        Stage stage = new Stage();
+                        usersVacationsListView = new ListView<>();
                         usersVacationsListView.getSelectionModel().selectedItemProperty()
                                 .addListener(new ChangeListener<String>() {
                                     public void changed(
                                             ObservableValue<? extends String> observable,
                                             String oldValue, String newValue) {
-                                        System.out.println("Selected "+newValue);
+                                        tradeVacation(id, newValue);
+                                        stage.close();
+                                        Alert error = new Alert(Alert.AlertType.INFORMATION);
+                                        error.setTitle("Sent offer!");
+                                        error.setContentText("The offer was sent the user!");
+                                        error.show();
                                     }
                                 });
                         ArrayList<String> usersVacations = controller.getVacationsUserIsSelling();
                         for (int i = 0; i < usersVacations.size(); i++) {
                             usersVacationsListView.getItems().add(usersVacations.get(i));
                         }
-                        Stage stage = new Stage();
                         stage.setTitle("Please select which vacation you want to trade");
-                        Scene scene = new Scene(new Group(),420,450);
+                        Scene scene = new Scene(new Group(), 420, 450);
                         stage.initModality(Modality.APPLICATION_MODAL);
                         final VBox vBox = new VBox();
                         vBox.setSpacing(5);
-                        vBox.setMinSize(420,450);
+                        vBox.setMinSize(420, 450);
                         vBox.setStyle("-fx-background-color: #d6a900");
                         vBox.setPadding(new Insets(0, 0, 0, 0));
                         usersVacationsListView.setStyle("-fx-control-inner-background:  #d6a900;-fx-background-insets: 10 ;");
@@ -160,14 +166,21 @@ public class SearchVacationView extends View {
                     }
                 }
             });
-            b1.setStyle("-fx-background-color: #d6a900");
-            b2.setStyle("-fx-background-color: #d6a900");
-            b3.setStyle("-fx-background-color: #d6a900");
-            Label l1 = new Label("Vacation Id: " + id + "   ");
-            hbox = new HBox(l1, b1, new Label("   "), b2, new Label("   "), b3);
-            root.getChildren().add(hbox);
-            root.setSpacing(10);
+            if (!Detailes.get("UserName").equals(controller.getCurrentUser())) {
+                b1.setStyle("-fx-background-color: #d6a900");
+                b2.setStyle("-fx-background-color: #d6a900");
+                b3.setStyle("-fx-background-color: #d6a900");
+                Label l1 = new Label("Vacation Id: " + id + "   ");
+                hbox = new HBox(l1, b1, new Label("   "), b2, new Label("   "), b3);
+                root.getChildren().add(hbox);
+                root.setSpacing(10);
+            }
         }
+    }
+
+    private void tradeVacation(String wantedId, String toTradeVacation) {
+        String toTradeId = toTradeVacation.substring(0, toTradeVacation.indexOf(',') - 1);
+        controller.addInterestedTrade(wantedId, controller.getCurrentUser(), toTradeId);
     }
 
     public void init() {

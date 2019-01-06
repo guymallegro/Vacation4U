@@ -5,7 +5,6 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import sample.View.Main;
 import sample.Model.Model;
-import sun.nio.cs.ext.MacCroatian;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -101,24 +100,35 @@ public class Controller {
         return model.getVacationResults(text);
     }
 
-    public void addInterested(String vacationId, String userName) {
-        model.addInterested(vacationId, userName);
+    public void addInterestedCash(String vacationId, String userName) {
+        model.addInterestedCash(vacationId, userName);
+    }
+    public void addInterestedTrade(String vacationId, String userName,String offer) {
+        model.addInterestedTrade(vacationId, userName,offer);
     }
 
-    public ArrayList<String> getVacationsUserIsSellingApproval(String username) {
-        return model.getVacationsUserIsSellingApproval(username);
+    public ArrayList<String> getVacationsUserIsSellingApproval(String username, boolean cash) {
+        return model.getVacationsUserIsSellingApproval(username, cash);
     }
 
     public ArrayList<String> getVacationsUserIsSelling() {
         return model.getVacationsUserIsSelling(getCurrentUser());
     }
 
-    public ArrayList<String> getVacationsUserIsInterested(String username) {
-        return model.getVacationsUserIsInterested(username);
+    public ArrayList<String> getVacationsUserIsInterested(String username, boolean cash) {
+        return model.getVacationsUserIsInterested(username, cash);
     }
 
     public void approveSale(String id) {
         model.approveSale(id);
 
+    }
+
+    public void rejectOffer(String id) {
+        model.rejectOffer(id);
+    }
+
+    public void approveTrade(String id) {
+        model.approveTrade(id);
     }
 }
