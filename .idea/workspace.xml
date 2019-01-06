@@ -1,15 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="febd1388-bbc9-49e7-9407-a87fa9bcb708" name="Default Changelist" comment="Added confirmation for orders and many improvements">
+    <list default="true" id="febd1388-bbc9-49e7-9407-a87fa9bcb708" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/maybenow/src/main/java/sample/Model/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Vacation4uDB.db" beforeDir="false" afterPath="$PROJECT_DIR$/Vacation4uDB.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/maybenow/src/main/java/sample/Controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/maybenow/src/main/java/sample/Controller/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/maybenow/src/main/java/sample/Model/Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/maybenow/src/main/java/sample/Model/Model.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/maybenow/src/main/java/sample/Model/SQLiteConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/maybenow/src/main/java/sample/Model/SQLiteConnection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/maybenow/src/main/java/sample/View/OrdersView.java" beforeDir="false" afterPath="$PROJECT_DIR$/maybenow/src/main/java/sample/View/OrdersView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/maybenow/src/main/java/sample/View/SearchVacationView.java" beforeDir="false" afterPath="$PROJECT_DIR$/maybenow/src/main/java/sample/View/SearchVacationView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/maybenow/src/main/resources/Orders.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/maybenow/src/main/resources/Orders.fxml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/maybenow/target/" />
@@ -123,26 +117,26 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="fxml" value="216" />
-          <entry key="java" value="4206" />
-          <entry key="txt" value="263" />
+          <entry key="java" value="4516" />
+          <entry key="txt" value="290" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="4206" />
-          <entry key="PLAIN_TEXT" value="263" />
+          <entry key="JAVA" value="4516" />
+          <entry key="PLAIN_TEXT" value="290" />
           <entry key="XML" value="216" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="fxml" value="37" />
-          <entry key="java" value="136" />
+          <entry key="java" value="138" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="136" />
+          <entry key="JAVA" value="138" />
           <entry key="XML" value="37" />
         </counts>
       </usages-collector>
@@ -174,14 +168,48 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/maybenow/src/main/java/sample/View/OrdersView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="735">
-              <caret line="95" column="14" selection-start-line="95" selection-start-column="14" selection-end-line="95" selection-end-column="14" />
+            <state relative-caret-position="395">
+              <caret line="78" column="46" lean-forward="true" selection-start-line="78" selection-start-column="46" selection-end-line="78" selection-end-column="46" />
               <folding>
                 <element signature="method#back#0;class#OrdersView#0" />
                 <element signature="method#CastStringToBoolean#0;class#OrdersView#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/maybenow/src/main/java/sample/Model/User.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="380">
+              <caret line="19" column="33" lean-forward="true" selection-start-line="19" selection-start-column="33" selection-end-line="19" selection-end-column="33" />
+              <folding>
+                <element signature="e#576#577#0" expanded="true" />
+                <element signature="e#624#625#0" expanded="true" />
+                <element signature="e#664#665#0" expanded="true" />
+                <element signature="e#699#700#0" expanded="true" />
+                <element signature="e#730#731#0" expanded="true" />
+                <element signature="e#778#779#0" expanded="true" />
+                <element signature="e#818#819#0" expanded="true" />
+                <element signature="e#850#851#0" expanded="true" />
+                <element signature="e#878#879#0" expanded="true" />
+                <element signature="e#920#921#0" expanded="true" />
+                <element signature="e#954#955#0" expanded="true" />
+                <element signature="e#990#991#0" expanded="true" />
+                <element signature="e#1022#1023#0" expanded="true" />
+                <element signature="e#1072#1073#0" expanded="true" />
+                <element signature="e#1114#1115#0" expanded="true" />
+                <element signature="e#1149#1150#0" expanded="true" />
+                <element signature="e#1180#1181#0" expanded="true" />
+                <element signature="e#1228#1229#0" expanded="true" />
+                <element signature="e#1268#1269#0" expanded="true" />
+                <element signature="e#1299#1300#0" expanded="true" />
+                <element signature="e#1326#1327#0" expanded="true" />
+                <element signature="e#1366#1367#0" expanded="true" />
+                <element signature="e#1398#1399#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -286,6 +314,7 @@
         <option value="$PROJECT_DIR$/maybenow/src/main/java/sample/Model/Model.java" />
         <option value="$PROJECT_DIR$/maybenow/src/main/java/sample/View/SearchVacationView.java" />
         <option value="$PROJECT_DIR$/maybenow/src/main/java/sample/View/OrdersView.java" />
+        <option value="$PROJECT_DIR$/maybenow/src/main/java/sample/Model/User.java" />
       </list>
     </option>
   </component>
@@ -386,7 +415,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1546792598686" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1546792880413" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../Search" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
@@ -526,7 +555,14 @@
       <option name="project" value="LOCAL" />
       <updated>1546552583489</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Finish the trade vacations">
+      <created>1546792680675</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1546792680675</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -610,7 +646,8 @@
     <MESSAGE value="Added confirmation for orders and many improvements" />
     <MESSAGE value="General code improvements, format, beginning of trade vacations" />
     <MESSAGE value="Continuing with vacation trade" />
-    <option name="LAST_COMMIT_MESSAGE" value="Continuing with vacation trade" />
+    <MESSAGE value="Finish the trade vacations" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finish the trade vacations" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/maybenow/maybenow.iml">
@@ -889,11 +926,43 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/maybenow/src/main/java/sample/View/OrdersView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="735">
-          <caret line="95" column="14" selection-start-line="95" selection-start-column="14" selection-end-line="95" selection-end-column="14" />
+        <state relative-caret-position="395">
+          <caret line="78" column="46" lean-forward="true" selection-start-line="78" selection-start-column="46" selection-end-line="78" selection-end-column="46" />
           <folding>
             <element signature="method#back#0;class#OrdersView#0" />
             <element signature="method#CastStringToBoolean#0;class#OrdersView#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/maybenow/src/main/java/sample/Model/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="19" column="33" lean-forward="true" selection-start-line="19" selection-start-column="33" selection-end-line="19" selection-end-column="33" />
+          <folding>
+            <element signature="e#576#577#0" expanded="true" />
+            <element signature="e#624#625#0" expanded="true" />
+            <element signature="e#664#665#0" expanded="true" />
+            <element signature="e#699#700#0" expanded="true" />
+            <element signature="e#730#731#0" expanded="true" />
+            <element signature="e#778#779#0" expanded="true" />
+            <element signature="e#818#819#0" expanded="true" />
+            <element signature="e#850#851#0" expanded="true" />
+            <element signature="e#878#879#0" expanded="true" />
+            <element signature="e#920#921#0" expanded="true" />
+            <element signature="e#954#955#0" expanded="true" />
+            <element signature="e#990#991#0" expanded="true" />
+            <element signature="e#1022#1023#0" expanded="true" />
+            <element signature="e#1072#1073#0" expanded="true" />
+            <element signature="e#1114#1115#0" expanded="true" />
+            <element signature="e#1149#1150#0" expanded="true" />
+            <element signature="e#1180#1181#0" expanded="true" />
+            <element signature="e#1228#1229#0" expanded="true" />
+            <element signature="e#1268#1269#0" expanded="true" />
+            <element signature="e#1299#1300#0" expanded="true" />
+            <element signature="e#1326#1327#0" expanded="true" />
+            <element signature="e#1366#1367#0" expanded="true" />
+            <element signature="e#1398#1399#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -8,6 +8,7 @@ import java.util.HashMap;
 public class Model {
     private Connection connection;
     private String currentUser;
+    private User user;
     private HashMap<String, String> userInfo;
 
     public Model() {
